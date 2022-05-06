@@ -1,0 +1,21 @@
+$sidebar-padding-bottom:10px;
+$sidebar-width: 56px;
+$sidebar-background-color: #eaecef;
+$sidebar-hover-width:250px;
+
+.sidebar {
+    width: $sidebar-hover-width;
+    height: 100vh;
+    background: $sidebar-background-color;
+    padding-bottom: $sidebar-padding-bottom;
+    transition: width 300ms ease-in-out;
+}
+
+/*.sidebar:hover{
+  width: $sidebar-hover-width;
+}*/
+
+nav {
+    height: 100%;
+    overflow: hidden;
+}

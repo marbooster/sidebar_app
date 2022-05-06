@@ -1,0 +1,110 @@
+$sidebar-link-color: white;
+$sidebar-link-width: 349px;
+$sidebar-link-icon-fontSize: 18px;
+$sidebar-link-icon-width: 20px;
+$sidebar-link-hover-active-color: cyan;
+$sidebar-background-color:#19122c;
+$sidebar-link-icon-transition: transform 0.5s ease-in-out;
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    margin-bottom: 0.1rem;
+    color: $sidebar-link-color;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: 0.3s;
+    width: $sidebar-link-width;
+  
+    &:hover {
+      color: $sidebar-link-hover-active-color;
+      text-decoration: none;
+      border-left-color: $sidebar-link-hover-active-color;
+    }
+    &::after {
+        content: " ";
+    }
+  }
+  .active {
+    color: $sidebar-link-hover-active-color;
+    background-color: $sidebar-background-color;
+    border-left-color: $sidebar-link-hover-active-color;
+}
+  
+  .sidebar-link-left-align {
+    justify-content: space-between;
+  }
+  
+  .sidebar-link-left {
+    display: flex;
+    align-items: center;
+  }
+
+
+  
+  .icon {
+    font-size: 18px;
+    margin-right: 1.7rem;
+    padding: 2px;
+    width: 20px;
+    svg {
+        width: 23px;
+        padding: 2px;
+    }
+  }
+  .showM li a .icon {
+    font-size: 15px;
+  }
+
+
+  .nav-icon-transparent {
+    color: rgba(255, 255, 255, 100);
+    visibility: hidden;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .showM li a .text {
+      font-size: 14px;
+  }
+
+  .showM li a.sidebar-link {
+      padding-left: 48px;
+  }
+
+  .arrow-position {
+    margin-right: 7px;
+    font-size: 1.25rem;
+  }
+
+  .closeSubMenu {
+    text-decoration: none;
+    .arrow-position {
+         transform: rotate(0deg);
+         transition: $sidebar-link-icon-transition;
+     }
+  }
+
+
+  .rotation {
+    text-decoration: none;
+    .arrow-position {
+         transform: rotate(90deg);
+         transition: $sidebar-link-icon-transition;
+     }
+  }
+
+  .expand-enter-active, .expand-leave-active {
+    transition: height .5s ease-in-out;
+    overflow: hidden;
+  }
+
+
+
+
+  
+
+  

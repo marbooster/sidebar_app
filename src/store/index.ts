@@ -1,17 +1,19 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
+import Vuex, {StoreOptions} from 'vuex'
+import  { RootState } from './types'
+import { sidebar } from './modules/sidebar/index';
+
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+const store: StoreOptions<RootState> = {
+    state: {
+        version: '1.0.0'
+    },
+    modules: {
+      sidebar: sidebar,
+    },
+    devtools: false
+}
+
+export default new Vuex.Store<RootState>(store)
